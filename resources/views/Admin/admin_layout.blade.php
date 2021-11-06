@@ -32,7 +32,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <header class="header fixed-top clearfix">
 <!--logo start-->
 <div class="brand">
-    <a href="{{route('admin-dashboard')}}" class="logo">
+    <a href="" class="logo">
         ADMIN
     </a>
     <div class="sidebar-toggle-box">
@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </a>
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Thông tin cá nhân</a></li>
-                <li><a href="{{route('admin-logout')}}"><i class="fa fa-key"></i>Đăng xuất</a></li>
+                <li><a href=""><i class="fa fa-key"></i>Đăng xuất</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Sách</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="">Danh sách đầu sách</a></li>
+                        <li><a href="#">Danh sách đầu sách</a></li>
                         <li><a href="#">Thêm sách</a></li>
                     </ul>
                 </li>
@@ -92,8 +92,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Thể loại sách</span>
                     </a>
                     <ul class="sub">
-                    	<li><a href="">Danh sách thể loại</a></li>
-						<li><a href="">Thêm thể loại</a></li>
+                    	<li><a href="{{route('admin.category.list')}}">Danh sách thể loại</a></li>
+						<li><a href="{{route('admin.category.create')}}">Thêm thể loại</a></li>
 
                     </ul>
                 </li>
@@ -232,6 +232,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		});
 	</script>
+
+
 	<!-- //calendar -->
+    @include('sweetalert::alert')
+
 </body>
 </html>
